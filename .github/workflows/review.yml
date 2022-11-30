@@ -42,6 +42,8 @@ jobs:
           flags: unittests
           name: codecov-umbrella
           verbose: true
+      - name: Replace all working directory paths with sources path
+        run: sed -i -e s,`pwd`,/github/workspace,g target/scala-3.2.1/scoverage-report/scoverage.xml
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@v1.8
         env:
