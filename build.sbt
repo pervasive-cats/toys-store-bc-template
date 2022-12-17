@@ -4,7 +4,7 @@ Global / onChangedBuildSource := ReloadOnSourceChanges
 
 Global / excludeLintKeys := Set(idePackagePrefix)
 
-ThisBuild / scalaVersion := "3.2.1"
+ThisBuild / scalaVersion := "3.2.2-RC1"
 
 ThisBuild / scalafixDependencies ++= Seq(
   "com.github.liancheng" %% "organize-imports" % "0.6.0",
@@ -29,7 +29,7 @@ lazy val root = project
       scalactic,
       scalatest
     ),
-    wartremoverErrors ++= Warts.all,
+    wartremoverErrors ++= Warts.allBut(Wart.ImplicitParameter),
     version := "0.0.0",
     coverageEnabled := true,
     coverageMinimumStmtTotal := 80,
