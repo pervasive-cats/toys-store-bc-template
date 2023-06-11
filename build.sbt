@@ -8,7 +8,7 @@ ThisBuild / scalaVersion := "3.2.2"
 
 ThisBuild / scalafixDependencies ++= Seq(
   "com.github.liancheng" %% "organize-imports" % "0.6.0",
-  "io.github.ghostbuster91.scalafix-unified" %% "unified" % "0.0.8",
+  "io.github.ghostbuster91.scalafix-unified" %% "unified" % "0.0.9",
   "net.pixiv" %% "scalafix-pixiv-rule" % "4.5.1"
 )
 
